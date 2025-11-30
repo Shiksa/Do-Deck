@@ -71,7 +71,7 @@ export const TodoProvider = ({ children }) => {
     const sortedDates = Object.keys(groups).sort((a, b) => {
       if (a === "No Date") return 1;
       if (b === "No Date") return -1;
-      return new Date(b) - new Date(a);
+      return new Date(a) - new Date(b);
     });
     return { sortedDates, groups };
   };
